@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";  // Import useLocat
 import axios from "axios";
 
 export const SearchBar = ({ setResults }) => {
+  const [name, setName] = useState("");
   const [specialite, setSpecialite] = useState("");
   const [localization, setLocalization] = useState("");
   const [assurance, setassurance] = useState("");
@@ -50,6 +51,7 @@ export const SearchBar = ({ setResults }) => {
   const queryParams = new URLSearchParams(location.search);
 
   useEffect(() => {
+    setName(queryParams.get("name") || "");
     setSpecialite(queryParams.get("specialite") || "");
     setLocalization(queryParams.get("localization") || "");
     setassurance(queryParams.get("assurance") || "");
@@ -61,6 +63,7 @@ export const SearchBar = ({ setResults }) => {
 
   const handleSearch = () => {
     const queryParams = new URLSearchParams({
+      name,
       specialite,
       localization,
       assurance,
@@ -84,9 +87,21 @@ export const SearchBar = ({ setResults }) => {
   };
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      {/* Name Input */}
+      <div className="col-span-1">
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Name"
+          className="w-full h-10 border-2 border-sky-500 focus:outline-none focus:border-sky-500 text-sky-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
+        />
+      </div>
+
       {/* Spécialité Dropdown */}
-      <div className="w-72">
+      <div className="col-span-1">
         <select
           name="specialite"
           value={specialite}
@@ -103,7 +118,7 @@ export const SearchBar = ({ setResults }) => {
       </div>
 
       {/* Localization Dropdown */}
-      <div className="w-72">
+      <div className="col-span-1">
         <select
           name="localization"
           value={localization}
@@ -120,7 +135,7 @@ export const SearchBar = ({ setResults }) => {
       </div>
 
       {/* Type d'assurance Dropdown */}
-      <div className="w-72">
+      <div className="col-span-1">
         <select
           name="assurance"
           value={assurance}
@@ -137,7 +152,7 @@ export const SearchBar = ({ setResults }) => {
       </div>
 
       {/* Disponibilité Dropdown */}
-      <div className="w-72">
+      <div className="col-span-1">
         <select
           name="disponibilite"
           value={disponibilite}
@@ -153,7 +168,7 @@ export const SearchBar = ({ setResults }) => {
         </select>
       </div>
 
-      <div className="w-72">
+      <div className="col-span-1">
         <button
           type="button"
           onClick={handleSearch}

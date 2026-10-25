@@ -13,6 +13,23 @@ import './DoctorProfile.css';
 import { Rating } from '../../components/rating/Rating';
 import { Spinner } from './Spinner'; // Ensure this component exists and is properly styled
 
+
+import L from "leaflet";
+import "leaflet/dist/leaflet.css"; // Import Leaflet CSS
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import { Comments } from '../../components/comments/Comments';
+
+// Fix default marker icon
+const DefaultIcon = L.icon({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
+
 export const DoctorProfile = ({ t }) => {
     const [profile, setProfile] = useState({});
     const [position, setPosition] = useState([0, 0]);
@@ -70,8 +87,12 @@ export const DoctorProfile = ({ t }) => {
         fetchData();
     }, [id, token]);
 
+    const handleRatingSuccess = () => {
+        fetchData(); // Re-fetch the doctor profile data
+      };
+
     // Map days of the week to their numerical values
-    const allowedDays = workingDays.map((item) => {
+    const allowedDays = workingDays?.map((item) => {
         switch (item.day_of_week) {
             case "Sunday":
                 return 0;
@@ -191,30 +212,41 @@ export const DoctorProfile = ({ t }) => {
                                     <span className="text-gray-900 font-medium">{profile.spoken_languages}</span>
                                 </div>
 
-                                {/* Years of Experience */}
-                                <div className="flex items-center">
-                                    <strong className="w-48 text-gray-600">{t("years_of_experience")}:</strong>
-                                    <span className="text-gray-900 font-medium">{profile.years_of_experience} {t("years")}</span>
-                                </div>
 
-                                {/* Zoom Link */}
-                                <div className="flex items-center">
-                                    <strong className="w-48 text-gray-600">{t("zoom_link")}:</strong>
+
+        
+                                <p className="my-1">
+                                    <strong>{t("specializedIn")}:</strong> {profile.specialization_name}
+                                </p>
+                                <p className="my-1">
+                                    <strong>{t("spoken_languages")}:</strong> {profile.spoken_languages}
+                                </p>
+                                <p className="my-1">
+                                    <strong>{t("Assurances")}:</strong> {profile.assurances?.map((as, idx) => <span>{as}, </span>)}
+                                </p>
+                                <p className="my-1">
+                                    <strong>{t("years_of_experience")}:</strong> {profile.years_of_experience} {t("years")}
+                                </p>
+                                <p className="my-1">
+                                    <strong>{t("zoom_link")}:</strong>{" "}
                                     <a
                                         href={profile.zoom_link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-blue-500 font-medium underline hover:text-blue-600 transition"
+                                        className="text-blue-500"
                                     >
-                                        {t("join_zoom_meeting")}
+                                        {profile.zoom_link}
                                     </a>
-                                </div>
-
-                                {/* Consultation Price */}
-                                <div className="flex items-center">
-                                    <strong className="w-48 text-gray-600">{t("Prix_Consultion")}:</strong>
-                                    <span className="text-gray-900 font-medium">{profile.visit_price} DA</span>
-                                </div>
+                                </p>
+                                <p className="my-1">
+                                    <strong>{t("visit_price")}:</strong> {profile.visit_price} DA
+                                </p>
+                                <p className="my-1">
+                                    <strong>{t("latitude")}:</strong> {profile.latitude}
+                                </p>
+                                <p className="my-1">
+                                    <strong>{t("longitude")}:</strong> {profile.longitude}
+                                </p>
 
                                 {/* Map Section */}
                                 <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
@@ -235,7 +267,10 @@ export const DoctorProfile = ({ t }) => {
                                 </div>
                             </div>
                             <div className='flex justify-center items-center text-center'>
-                                <Rating idDoctor={profile.id} />
+                                <Rating idDoctor={profile.id} t={t} onRatingSuccess={handleRatingSuccess} />
+                            </div>
+                            <div className="">
+                                <Comments idDoctor={profile.id} t={t} />
                             </div>
                         </div>
 
@@ -259,7 +294,7 @@ export const DoctorProfile = ({ t }) => {
                             {/* Appointment Times */}
                             <div className="space-y-4">
                                 <div className="mt-1 !text-center">
-                                    {workingDays.map((el, idx) => (
+                                    {workingDays?.map((el, idx) => (
                                         <div key={idx} className='mb-1 grid grid-cols-4 rounded-t-md rounded-b-md overflow-hidden cursor-pointer'>
                                             <div className="bg-blue-200 hover:bg-blue-300 text-sm px-4 py-3">
                                                 {el.day_of_week}
@@ -286,13 +321,13 @@ export const DoctorProfile = ({ t }) => {
                                         </div>
                                         {selectedDate && (
                                             <div className='mt-2 flex justify-center items-center'>
-                                                <h3>Date sélectionnée : {selectedDate.toLocaleDateString()}</h3>
+                                                <h3>Date sélectionnée : {selectedDate.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' })}</h3>
                                             </div>
                                         )}
                                     </div>
                                     <div className="w-full !text-center mt-4">
                                         {selectedDate ? (
-                                            <Link to={token ? `/appointment/${id}/${selectedDate?.toLocaleDateString()}/${MappingWokingDayId}` : "/login"}>
+                                            <Link to={token ? `/appointment/${id}/${selectedDate?.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' })}/${MappingWokingDayId}` : "/login"}>
                                                 <button
                                                     className="w-full !text-center text-sm px-4 py-3 rounded-b-md rounded-t-md mb-2 bg-red-500 text-white font-semibold hover:bg-red-600"
                                                 >

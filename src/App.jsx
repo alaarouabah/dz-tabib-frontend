@@ -15,9 +15,9 @@ import { ForgetPassword } from "./pages/forgetPassword/ForgetPassword.jsx";
 import { ResetPassword } from "./pages/resetPassword/ResetPassword.jsx";
 import { MyProfile } from "./pages/profile/Profile.jsx";
 import { EditProfile } from "./pages/EditProfile/EditProfile.jsx";
-import { EditWorkingDays } from "./workingDays/EditWorkingDays.jsx";
-import { AddWorkingDay } from "./workingDays/AddWorkingDay.jsx";
-import { WorkingDaysList } from "./workingDays/WorkingDayList.jsx";
+import { EditWorkingDays } from "./pages/workingDays/EditWorkingDays.jsx";
+import { AddWorkingDay } from "./pages/workingDays/AddWorkingDay.jsx";
+import { WorkingDaysList } from "./pages/workingDays/WorkingDayList.jsx";
 import DoctorAppointment from "./pages/DoctorAppointment/DoctorAppointment.jsx";
 import PatientAppointment from "./pages/PatientAppointment/patientAppointment.jsx";
 import { SearchPage } from "./pages/SearchPage/SearchPage.jsx";
@@ -42,7 +42,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword t={t} />} />
         <Route path="/profile" element={<MyProfile t={t} />} />
         <Route path="/editprofile" element={<EditProfile t={t} />} />
-        <Route path="/editwokringdays/:id" element={<EditWorkingDays t={t} />} />
+        <Route path="/editworkingdays/:id" element={<EditWorkingDays t={t} />} />
         <Route path="/addworkingday/:id" element={<AddWorkingDay t={t} />} />
         <Route path="/workingdays/:id" element={<WorkingDaysList t={t} />} />
         <Route path="/appointments" element={<DoctorAppointment t={t} />} />

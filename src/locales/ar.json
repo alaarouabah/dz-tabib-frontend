@@ -1,15 +1,15 @@
 {
-  "Welcome to React": "مرحبًا بك في React و react-i18next",
+  "Welcome to React": "مرحبًا بكم في React و react-i18next",
   "Footer": {
     "About": {
-      "About": "عن",
-      "AboutUs": "معلومات عنا",
+      "About": "معلومات عنا",
+      "AboutUs": "من نحن",
       "OurTeam": "فريقنا",
-      "Careers": "الوظائف",
+      "Careers": "وظائف",
       "Press": "صحافة"
     },
     "Search": {
-      "SearchBy": "البحث بواسطة",
+      "SearchBy": "ابحث حسب",
       "Speciality": "التخصص",
       "Area": "المنطقة",
       "Insurance": "التأمين",
@@ -21,24 +21,27 @@
       "JoinVezeetaDoctors": "انضم إلى أطباء Dz-tabib"
     },
     "Help": {
-      "NeedHelp": "تحتاج مساعدة؟",
+      "NeedHelp": "تحتاج إلى مساعدة؟",
       "MedicalLibrary": "المكتبة الطبية",
       "ContactUs": "اتصل بنا",
       "TermsOfUse": "شروط الاستخدام",
       "PrivacyPolicy": "سياسة الخصوصية",
-      "DoctorsPrivacyPolicy": "سياسة خصوصية الأطباء"
+      "DoctorsPrivacyPolicy": "سياسة الخصوصية للأطباء"
     },
     "Security": "الأمان",
     "AllRightsReserved": "جميع الحقوق محفوظة"
   },
   "Header": {
     "Login": "تسجيل الدخول",
-    "SignUp": "إنشاء حساب",
-    "HomePage": "الصفحة الرئيسية"
+    "SignUp": "التسجيل",
+    "HomePage": "الصفحة الرئيسية",
+    "Profile": "الملف الشخصي",
+    "EditProfile": "تعديل الملف الشخصي",
+    "LogOut": "تسجيل الخروج"
   },
   "HomePage": {
     "hero": {
-      "title": "رعاية صحية أفضل لحياة أفضل",
+      "title": "صحة أفضل لحياة أفضل",
       "reservation": "احجز موعدًا عبر الإنترنت"
     },
     "home": {
@@ -48,47 +51,47 @@
       "BookAppointment": "حجز موعد",
       "AllSpecialties": "جميع التخصصات",
       "aboutPlatform": {
-        "title": "حول Dz-Tabib®",
-        "description": "dz-Tabib® هو مركز لمسار صحتك. نقرب الأطباء المؤهلين من جميع المواطنين، سواء كانوا يعيشون في المدن أو في القرى أو في المناطق النائية التي تعاني من نقص الخدمات الطبية. توفر منصتنا جميع الموارد اللازمة، ليس فقط لحجز المواعيد، ولكن أيضًا لتنظيم رعاية طبية شاملة."
+        "title": "عن Dz-Tabib®",
+        "description": "Dz-Tabib® هو مركز لرحلة صحتك. نقرب الأطباء المؤهلين من جميع المواطنين، سواء كانوا يعيشون في المدينة أو الريف أو في المناطق النائية. منصتنا توفر لك جميع الموارد، ليس فقط لحجز المواعيد، ولكن أيضًا لتنظيم رعاية طبية شاملة."
       }
     },
     "Teleconsultation": {
       "Title": "الاستشارة عن بعد",
       "Description1": "استشر طبيبك",
-      "Description11": "من منزلك",
+      "Description11": "من منزلك.",
       "Description2": "استشر طبيبك عن بعد.",
       "Description3": "شارك مستنداتك مع طبيبك.",
       "Description4": "استفد من استشارة سريعة تزيد من راحتك.",
-      "Description5": "اغتنم الفرصة لتجديد وصفاتك الطبية أو لقراءة نتائج التحاليل."
+      "Description5": "استفد منها لتجديد وصفاتك الطبية أو لقراءة نتائج التحاليل."
     },
     "FollowUs": {
-      "Title": "تابعونا",
-      "Description1": "تابعونا على مواقع التواصل الاجتماعي",
-      "Description2": "تابعونا للحصول على نصائحنا، وحيلنا، وآخر مستجداتنا! سيكون لدينا أيضًا ضيوف مميزون معنا من خلال البث المباشر وسلسلتنا على الويب:",
-      "Description3": "صحتي مع بصحة"
+      "Title": "تابعنا",
+      "Description1": "تابعنا على وسائل التواصل الاجتماعي",
+      "Description2": "انضم إلينا لمتابعة نصائحنا، حيلنا، وأحدث أخبارنا! ضيوف مميزون سيحضرون أيضًا معنا عبر البث المباشر وسلسلتنا الويب: ",
+      "Description3": "ESTIN"
     }
   },
   "Specialities": {
     "Anesthesiology": "التخدير",
     "Cardiology": "أمراض القلب",
-    "Dermatology": "أمراض الجلد",
+    "Dermatology": "الأمراض الجلدية",
     "Endocrinology": "الغدد الصماء",
-    "Family Medicine": "الطب العائلي",
+    "Family Medicine": "الطب العام",
     "Gastroenterology": "أمراض الجهاز الهضمي",
-    "Geriatrics": "طب المسنين",
+    "Geriatrics": "طب الشيخوخة",
     "Hematology": "أمراض الدم",
     "Infectious Disease": "الأمراض المعدية",
     "Internal Medicine": "الطب الباطني",
-    "Neurology": "طب الأعصاب",
+    "Neurology": "الأعصاب",
     "Obstetrics and Gynecology": "النساء والتوليد",
-    "Oncology": "أورام",
+    "Oncology": "الأورام",
     "Ophthalmology": "طب العيون",
     "Orthopedic Surgery": "جراحة العظام",
     "Pediatrics": "طب الأطفال",
     "Psychiatry": "الطب النفسي",
-    "Pulmonology": "أمراض الصدر",
+    "Pulmonology": "أمراض الرئة",
     "Rheumatology": "الروماتيزم",
-    "Surgery": "الجراحة",
+    "Surgery": "جراحة",
     "Urology": "جراحة المسالك البولية"
   },
   "Authentification": {
@@ -96,20 +99,19 @@
     "userName": "اسم المستخدم",
     "firstName": "الاسم الأول",
     "lastName": "الاسم الأخير",
-    "EmailAddress": "عنوان البريد الإلكتروني",
+    "EmailAddress": "البريد الإلكتروني",
     "Password": "كلمة المرور",
-    "Forget": "نسيت كلمة المرور ؟",
-    "NotAMember": "لست عضواً بعد ؟",
-    "CreateAccount": "إنشاء حساب مجاني",
+    "Forget": "نسيت كلمة المرور؟",
+    "NotAMember": "لست عضوًا بعد؟",
+    "CreateAccount": "أنشئ حسابك المجاني",
     "ResetPassword": "إعادة تعيين كلمة المرور",
-    "AlreadyHaveAccount": "هل لديك حساب بالفعل ؟",
+    "AlreadyHaveAccount": "هل لديك حساب بالفعل؟",
     "ResetPasswordTitle": "إعادة تعيين كلمة المرور",
     "NewPassword": "كلمة المرور الجديدة",
     "ConfirmPassword": "تأكيد كلمة المرور"
   },
-
   "doctorCard": {
-    "doctor": "الدكتور",
+    "doctor": "دكتور",
     "specializedIn": "متخصص في:",
     "location": "📍 الموقع:",
     "fees": "💰 الرسوم:",
@@ -117,7 +119,7 @@
     "phone": "📞 الهاتف:",
     "availability": {
       "today": "اليوم",
-      "tomorrow": "غداً",
+      "tomorrow": "غدًا",
       "other": "الخميس 21/11"
     }
   },
@@ -132,7 +134,7 @@
     "doctorName": "اسم الطبيب",
     "specialty": "التخصص",
     "location": "الموقع",
-    "availability": "التوافر",
+    "availability": "التوفر",
     "patientDetails": "تفاصيل المريض",
     "fullName": "الاسم الكامل",
     "phoneNumber": "رقم الهاتف",
@@ -140,54 +142,182 @@
     "notes": "ملاحظات (اختياري)",
     "submit": "إرسال",
     "cancel": "إلغاء",
-    "back": "رجوع",
+    "back": "عودة",
     "teleconsultation": "الاستشارة عن بعد",
-    "book": "احجز"
+    "book": "حجز"
   },
   "aboutDoctor": {
-    "title": "حول الطبيب",
+    "title": "عن الطبيب",
     "bio": "السيرة الذاتية",
     "experience": "الخبرة",
     "education": "التعليم",
-    "languagesSpoken": "اللغات المحكية",
+    "languagesSpoken": "اللغات المتحدث بها",
     "specialties": "التخصصات",
-    "location": "الموقع",
     "consultationFee": "رسوم الاستشارة",
-    "availability": "التوافر",
+    "availability": "التوفر",
     "contact": "الاتصال",
     "bookAppointment": "حجز موعد",
-    "reviews": "المراجعات",
-    "ratings": "التقييمات"
+    "reviews": "التقييمات",
+    "ratings": "التقييمات",
+    "doctor": "دكتور",
+    "location": "الموقع",
+    "phone": "الهاتف"
   },
   "pagination": {
     "previous": "السابق",
     "next": "التالي",
-    "pages": ["١", "٢", "٣", "٤", "٥"]
+    "pages": ["1", "2", "3", "4", "5"]
   },
   "header": {
-    "allSpecialities": "كل التخصصات"
+    "allSpecialities": "جميع التخصصات"
   },
   "appointmentPage": {
     "form": {
       "title": "أدخل معلوماتك",
-      "patientNameLabel": "اسم المريض (الذي يزور الطبيب)",
+      "patientNameLabel": "اسم المريض (الذي يستشير الطبيب)",
       "patientNamePlaceholder": "أدخل اسم المريض",
-      "mobileNumberLabel": "رقم الهاتف المحمول",
+      "mobileNumberLabel": "رقم الهاتف",
       "mobileNumberPlaceholder": "أدخل رقم الهاتف",
       "optionnel": "(اختياري)",
-      "emailPlaceholder": "أدخل البريد الإلكتروني"
+      "emailPlaceholder": "أدخل البريد الإلكتروني",
+      "Reason": "السبب",
+      "Enter_Reason": "أدخل سبب موعدك",
+      "appointmentTypeLabel": "نوع الموعد"
     },
     "buttons": {
-      "book": "احجز",
+      "book": "حجز",
       "cancel": "إلغاء"
     }
   },
+  "update_profile": "تحديث الملف الشخصي",
+  "profile": {
+    "edit_profile": "تعديل الملف الشخصي",
+    "update": "تحديث",
+    "fetchError": "خطأ في جلب الملف الشخصي",
+    "updateSuccess": "تم تحديث الملف الشخصي بنجاح.",
+    "updateError": "فشل تحديث الملف الشخصي. يرجى المحاولة مرة أخرى.",
+    "my_profile": "ملفي الشخصي",
+    "noTokenError": "لم يتم العثور على رمز التحقق. يرجى تسجيل الدخول."
+  },
+  "username": "اسم المستخدم",
+  "first_name": "الاسم الأول",
+  "last_name": "الاسم الأخير",
+  "email": "البريد الإلكتروني",
+  "phone_number": "رقم الهاتف",
+  "experience_start_date": "تاريخ بدء الخبرة",
+  "state": "الولاية",
+  "city": "المدينة",
+  "street": "الشارع",
+  "spoken_languages": "اللغات المتحدث بها",
+  "zoom_link": "رابط Zoom",
+  "visit_price": "سعر الزيارة",
+  "specialization_id": "التخصص",
+  "latitude": "خط العرض",
+  "longitude": "خط الطول",
+  "select_state": "اختر الولاية",
+  "select_languages": "اختر اللغات",
+  "loading": "جاري التحميل...",
   "Errors": {
+    "UnknownError": "حدث خطأ غير معروف",
     "RequiredFirstName": "الاسم الأول مطلوب.",
-    "RequiredLastName": "اسم العائلة مطلوب.",
+    "RequiredLastName": "الاسم الأخير مطلوب.",
     "RequiredUsername": "اسم المستخدم مطلوب.",
     "RequiredEmail": "البريد الإلكتروني مطلوب.",
     "RequiredPassword": "كلمة المرور مطلوبة.",
-    "PasswordMismatch": "كلمتا المرور غير متطابقتين."
-  }
+    "PasswordMismatch": "كلمات المرور غير متطابقة."
+  },
+  "Email": "البريد الإلكتروني",
+  "specializedIn": "متخصص في",
+  "years_of_experience": "سنوات الخبرة",
+  "working_days": {
+    "edit": "تعديل أيام العمل",
+    "day": "اليوم"
+  },
+  "day_of_week": "يوم الأسبوع",
+  "daily_appointment_limit": "الحد اليومي للمواعيد",
+  "start_time": "وقت البدء",
+  "end_time": "وقت الانتهاء",
+  "submit": "إرسال",
+  "working_days_list": {
+    "title": "قائمة أيام العمل",
+    "add_button": "إضافة يوم عمل",
+    "day_of_week": "يوم الأسبوع",
+    "daily_limit": "الحد اليومي",
+    "start_time": "وقت البدء",
+    "end_time": "وقت الانتهاء",
+    "actions": "الإجراءات",
+    "edit_button": "تعديل",
+    "remove_button": "حذف",
+    "no_token_error": "خطأ: لم يتم العثور على رمز التحقق.",
+    "fetch_error": "خطأ في جلب أيام العمل."
+  },
+  "add_working_day": {
+    "title": "إضافة يوم عمل",
+    "day_of_week": "يوم الأسبوع",
+    "select_day": "اختر يومًا",
+    "daily_limit": "الحد اليومي للمواعيد",
+    "start_time": "وقت البدء",
+    "end_time": "وقت الانتهاء",
+    "submit": "إضافة يوم عمل",
+    "adding": "جاري الإضافة...",
+    "error": "خطأ في إضافة يوم العمل."
+  },
+  "days": {
+    "monday": "الاثنين",
+    "tuesday": "الثلاثاء",
+    "wednesday": "الأربعاء",
+    "thursday": "الخميس",
+    "friday": "الجمعة",
+    "saturday": "السبت",
+    "sunday": "الأحد"
+  },
+  "doctor_appointments": "مواعيد الطبيب",
+  "show_date_picker": "إظهار منتقي التاريخ",
+  "hide_date_picker": "إخفاء منتقي التاريخ",
+  "select_a_date": "اختر تاريخًا",
+  "no_appointments_for_this_date": "لا توجد مواعيد لهذا التاريخ.",
+  "failed_to_update_status": "فشل تحديث حالة الموعد.",
+  "patient_name": "اسم المريض",
+  "phone": "الهاتف",
+  "date": "التاريخ",
+  "reason": "السبب",
+  "status": "الحالة",
+  "type": "النوع",
+  "actions": "الإجراءات",
+  "no_reason_provided": "لم يتم تقديم سبب",
+  "pending": "قيد الانتظار",
+  "completed": "مكتمل",
+  "cancelled": "ملغى",
+  "select_a_date_in_calendar": "اختر تاريخًا من التقويم.",
+  "patient_appointments": "مواعيد المرضى",
+  "doctor_name": "اسم الطبيب",
+  "appointment_date": "تاريخ الموعد",
+  "doctor_specialization": "تخصص الطبيب",
+  "no_reason": "لم يتم تقديم سبب",
+  "no_appointments": "لم يتم العثور على مواعيد.",
+  "Annuler": "إلغاء",
+  "failed_to_remove_appointment": "فشل إلغاء الموعد.",
+  "searchPage": {
+    "allDoctors": "جميع الأطباء",
+    "noDoctorsFound": "لم يتم العثور على أطباء يتطابقون مع معاييرك."
+  },
+  "rating": {
+    "title": "قيم هذا الطبيب:",
+    "yourRating": "تقييمك",
+    "stars": "نجوم"
+  },
+  "Spécialité": "التخصص",
+  "Localization": "الموقع",
+  "Type d'assurance": "نوع التأمين",
+  "Disponibilité": "التوفر",
+  "Search": "بحث",
+  "Select Image": "اختر صورة",
+  "Upload Picture": "رفع الصورة",
+  "Edit My Profile": "تعديل ملفي الشخصي",
+  "Doctor Appointments": "مواعيد الطبيب",
+  "My Appointments": "مواعيدي",
+  "Information": "معلومات",
+  "Working Days": "أيام العمل"
+
+
 }

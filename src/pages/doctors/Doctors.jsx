@@ -14,10 +14,20 @@ export const Doctors = ({ t }) => {
   const [doctors, setDoctors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Update currentPage when searchParams change
+  useEffect(() => {
+    const page = parseInt(searchParams.get('page')) || 1;
+    setCurrentPage(page);
+    setDoctors([]);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  }, [searchParams]);
+
+
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-      setSearchParams({ page: page.toString() }); // Update the URL search params
+      setSearchParams({ page: page.toString(), limit: '10' }); // Update the URL search params
     }
   };
 
@@ -48,7 +58,7 @@ export const Doctors = ({ t }) => {
   return (
     <>
       <Header t={t} />
-      <div className='bg-gray-100 pt-14 mt-7'>
+      <div className='bg-gray-100 pt-14'>
         <div className="container min-h-screen mx-auto p-14 bg-white rounded-lg">
           <h1 className="text-2xl font-bold mb-4">All Doctors</h1>
           {isLoading ? (
@@ -84,8 +94,8 @@ export const Doctors = ({ t }) => {
                   <button
                     onClick={() => handlePageChange(page)}
                     className={`flex items-center justify-center px-3 h-8 leading-tight ${page === currentPage
-                        ? "text-blue-600 bg-blue-50 border-blue-300"
-                        : "text-gray-500 bg-white border-gray-300"
+                      ? "text-blue-600 bg-blue-50 border-blue-300"
+                      : "text-gray-500 bg-white border-gray-300"
                       } hover:bg-gray-100 hover:text-gray-700`}
                   >
                     {page}
